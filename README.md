@@ -26,6 +26,15 @@ class Example extends Component {
 }
 ```
 
+## Props
+| Property | Type | Description |
+|---|---|---|
+| value | String | Text to search for.  This is the only required prop. |
+| onDone | Function | Called with a `{ count }` object indicating number of matches |
+| test | Boolean | Use this to mark *all* text under `search-children`'s purview |
+| highlighterProps | HighlighterProps | Props to pass to the underlying search component, [react-highlight-words](https://github.com/bvaughn/react-highlight-words) |
+| highlightTag | ReactNode | Tag to wrap around highlighted matches.  Defaults to `<mark>` |
+
 ## License
 
 MIT © [jfrancos](https://github.com/jfrancos)
