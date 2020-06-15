@@ -1,8 +1,8 @@
 
 # search-children
 
-<code>&lt;Search value=&quot;text&quot;&gt;Specify <mark>text</mark> you would like highlighted anywhere (within reason) under search-children&lt;/Search&gt;</code>
 
+<code>&lt;Search value="text" highlightTag="strong"&gt;Specify **text** you would like highlighted anywhere (within reason) under search-children&lt;/Search&gt;</code>
 
 [![NPM](https://img.shields.io/npm/v/search-children.svg)](https://www.npmjs.com/package/search-children) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
