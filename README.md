@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install --save search-children
+npm install search-children
 ```
 
 ## Usage
