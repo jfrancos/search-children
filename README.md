@@ -18,12 +18,14 @@ npm install search-children
 import React from 'react'
 import Search, { Pierce } from 'search-children'
 
+const Deep = () =>
+  <p>It can even find text produced by a component (as opposed to just children), using the accompanying <Pierce> Element</p>
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+const SearchExample = () =>
+  <Search highlightTag='strong' value='find'>
+    <p> search-children finds text in any amount of nesting</p>
+    <Pierce><Deep /></Pierce>
+  </Search>
 ```
 
 ## Props
