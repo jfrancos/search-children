@@ -6,14 +6,15 @@ import React, {
   Children,
   ReactNode,
 } from 'react'
-import Highlighter, { HighlighterProps } from "react-highlight-words";
+import Highlighter from "react-highlight-words";
 
 type SearchProps = {
   children?: ReactNode
   onDone?: (itemsFound: number) => void
   test?: boolean
   searchValue: string
-  highlighterProps?: HighlighterProps
+  highlightTag?: any
+  highlighterProps?: any
 }
 
 const shouldPierce = (child?: ReactNode): boolean =>
@@ -25,12 +26,11 @@ const Search = ({
   onDone,
   test,
   searchValue,
-  highlighterProps
+  highlighterProps,
+  highlightTag = 'mark'
 }: SearchProps): JSX.Element => {
   let count = 0
-  const highlightTag = (
-    highlighterProps && highlighterProps.highlightTag
-  ) || 'mark'
+
   const counterTag = ({ children }: { children: JSX.Element }) => {
     count++
     return createElement(highlightTag, null, children)
