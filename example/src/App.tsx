@@ -1,29 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Search, { Pierce } from 'search-children'
+import './index.css'
 
-const DeeperEl = () => <div>qrweweweqttt</div>
-const DeepEl = () => <div>qwer<DeeperEl/></div>
+const Deep = () =>
+  <p>
+    It can even find text rendered by a component (as opposed to just children),
+    using the accompanying Pierce element
+  </p>
 
-class SearchMe extends React.Component {
-  render() {
-    return <>
-        thas is deep
-    {this.props.children}
-    </>
+const SearchExample = () => {
+  const [searchCount, setSearchCount] = useState(0)
+  // @ts-ignore
+  const handleSearchDone = ({ count }) => {
+    setSearchCount(count)
   }
+  console.log(searchCount)
+  return (
+    <Search value='find' onDone={handleSearchDone}>
+      <p>search-children finds text in any amount of nesting</p>
+      <Pierce><Deep /></Pierce>
+    <p>Here, search-children finds {searchCount.toString()} results.</p>
+    </Search>
+  )
 }
-
-const App = () => {
-  return <>
-    <Search highlightTag='strong' value='as'><div>asdf</div><div>asdf</div></Search>
-    <Search value='we'><Pierce><DeepEl/><DeepEl/></Pierce>we</Search>
-    hello
-    <Search value='as'><Pierce><SearchMe><div>asdf</div><div>asdf</div></SearchMe></Pierce></Search>
-
-    <Search value=''></Search>
-    <Search value='sd'>asdf</Search>
-
-  </>
-}
-
-export default App
+export default SearchExample
