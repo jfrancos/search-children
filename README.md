@@ -2,7 +2,7 @@
 # search-children
 
 
-<code>&lt;Search value="text"&gt;Specify **text** to find and mark&lt;/Search&gt;</code>
+React component that lets you specify text to find and mark/highlight
 
 [![NPM](https://img.shields.io/npm/v/search-children.svg)](https://www.npmjs.com/package/search-children) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
