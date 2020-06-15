@@ -37,6 +37,9 @@ const SearchExample = () => {
 }
 ```
 
+![](https://raw.githubusercontent.com/jfrancos/search-children/master/example/public/Example.png?token=ADRRWWPZZUDSXJ3333PADVC66EYDA)
+
+
 ## Props
 | Property | Type | Description |
 |---|---|---|
