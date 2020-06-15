@@ -2,7 +2,7 @@
 # search-children
 
 
-<code>&lt;Search value="text" highlightTag="strong"&gt;Specify **text** you would like to have marked&lt;/Search&gt;</code>
+<code>&lt;Search value="text"&gt;Specify **text** to find and mark&lt;/Search&gt;</code>
 
 [![NPM](https://img.shields.io/npm/v/search-children.svg)](https://www.npmjs.com/package/search-children) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -18,12 +18,17 @@ npm install search-children
 import React from 'react'
 import Search, { Pierce } from 'search-children'
 
+const Deep = () =>
+  <p>
+    It can even find text rendered by a component (as opposed to just children),
+    using the accompanying Pierce element
+  </p>
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+const SearchExample = () =>
+  <Search value='find'>
+    <p> search-children finds text in any amount of nesting</p>
+    <Pierce><Deep /></Pierce>
+  </Search>
 ```
 
 ## Props
