@@ -39,6 +39,8 @@ const SearchExample = () => {
 
 ![](https://raw.githubusercontent.com/jfrancos/search-children/master/example/public/Example.png?token=ADRRWWPZZUDSXJ3333PADVC66EYDA)
 
+The accompanying <Pierce> element messes with React's mechanisms for rendering components, so please use with caution/testing.
+
 
 ## Props
 | Property | Type | Description |
