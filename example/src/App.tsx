@@ -11,15 +11,12 @@ const Deep = () =>
 const SearchExample = () => {
   const [searchCount, setSearchCount] = useState(0)
   // @ts-ignore
-  const handleSearchDone = ({ count }) => {
-    setSearchCount(count)
-  }
-  console.log(searchCount)
+  const handleSearchDone = ({ count }) => setSearchCount(count)
   return (
     <Search value='find' onDone={handleSearchDone}>
       <p>search-children finds text in any amount of nesting</p>
       <Pierce><Deep /></Pierce>
-    <p>Here, search-children finds {searchCount.toString()} results.</p>
+      <p>Here, search-children finds {searchCount.toString()} results.</p>
     </Search>
   )
 }
