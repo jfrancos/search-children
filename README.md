@@ -19,10 +19,13 @@ import React from 'react'
 import Search, { Pierce } from 'search-children'
 
 const Deep = () =>
-  <p>It can even find text rendered by a component (as opposed to just children), using the accompanying <Pierce> Element</p>
+  <p>
+    It can even find text rendered by a component (as opposed to just children),
+    using the accompanying <Pierce> Element
+  </p>
 
 const SearchExample = () =>
-  <Search highlightTag='strong' value='find'>
+  <Search value='find'>
     <p> search-children finds text in any amount of nesting</p>
     <Pierce><Deep /></Pierce>
   </Search>
