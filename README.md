@@ -15,7 +15,7 @@ npm install search-children
 ## Usage
 
 ```tsx
-import React from 'react'
+import React, { useState } from 'react'
 import Search, { Pierce } from 'search-children'
 
 const Deep = () =>
@@ -24,11 +24,17 @@ const Deep = () =>
     using the accompanying Pierce element
   </p>
 
-const SearchExample = () =>
-  <Search value='find'>
-    <p> search-children finds text in any amount of nesting</p>
-    <Pierce><Deep /></Pierce>
-  </Search>
+const SearchExample = () => {
+  const [searchCount, setSearchCount] = useState(0)
+  const handleSearchDone = ({ count }) => setSearchCount(count)
+  return (
+    <Search value='find' onDone={handleSearchDone}>
+      <p>search-children finds text in any amount of nesting</p>
+      <Pierce><Deep /></Pierce>
+      <p>Here, search-children finds {searchCount.toString()} results.</p>
+    </Search>
+  )
+}
 ```
 
 ## Props
