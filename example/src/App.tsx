@@ -15,13 +15,13 @@ class SearchMe extends React.Component {
 
 const App = () => {
   return <>
-    <Search highlightTag='strong' searchValue='as'><div>asdf</div><div>asdf</div></Search>
-    <Search searchValue='we'><Pierce><DeepEl/><DeepEl/></Pierce>we</Search>
+    <Search highlightTag='strong' value='as'><div>asdf</div><div>asdf</div></Search>
+    <Search value='we'><Pierce><DeepEl/><DeepEl/></Pierce>we</Search>
     hello
-    <Search searchValue='as'><Pierce><SearchMe><div>asdf</div><div>asdf</div></SearchMe></Pierce></Search>
+    <Search value='as'><Pierce><SearchMe><div>asdf</div><div>asdf</div></SearchMe></Pierce></Search>
 
-    <Search searchValue=''></Search>
-    <Search searchValue='sd'>asdf</Search>
+    <Search value=''></Search>
+    <Search value='sd'>asdf</Search>
 
   </>
 }

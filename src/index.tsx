@@ -10,9 +10,9 @@ import Highlighter from "react-highlight-words";
 
 type SearchProps = {
   children?: ReactNode
-  onDone?: (itemsFound: number) => void
+  onDone?: (itemsFound: {count: number}) => void
   test?: boolean
-  searchValue: string
+  value: string
   highlightTag?: any
   highlighterProps?: any
 }
@@ -25,7 +25,7 @@ const Search = ({
   children,
   onDone,
   test,
-  searchValue,
+  value,
   highlighterProps,
   highlightTag = 'mark'
 }: SearchProps): JSX.Element => {
@@ -39,7 +39,7 @@ const Search = ({
   const Highlight = ({ child }: { child: string }) =>
     <Highlighter
       {...highlighterProps}
-      searchWords={[searchValue]}
+      searchWords={[value]}
       textToHighlight={child}
       highlightTag={counterTag}
     />
@@ -74,7 +74,7 @@ const Search = ({
     }
   }
   useEffect(() => {
-    onDone && onDone(count)
+    onDone && onDone({count})
   })
   return deepHighlight(children) || null
 }
