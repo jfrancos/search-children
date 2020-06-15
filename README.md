@@ -2,7 +2,7 @@
 # search-children
 
 
-<code>&lt;Search value="text" highlightTag="strong"&gt;Specify **text** you would like to have marked&lt;/Search&gt;</code>
+<code>&lt;Search value="text"&gt;Specify **text** you would like to have marked&lt;/Search&gt;</code>
 
 [![NPM](https://img.shields.io/npm/v/search-children.svg)](https://www.npmjs.com/package/search-children) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
