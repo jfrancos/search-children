@@ -21,7 +21,7 @@ import Search, { Pierce } from 'search-children'
 const Deep = () =>
   <p>
     It can even find text rendered by a component (as opposed to just children),
-    using the accompanying &lte;Pierce&gte; Element
+    using the accompanying &lt;Pierce&gt; Element
   </p>
 
 const SearchExample = () =>
